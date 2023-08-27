@@ -4,4 +4,6 @@
     <string name="this_is_moveactivity">Ini MoveActivity</string>
     <string name="move_activity_data">Pindah Activity dengan Data</string>
     <string name="data_received">Data Diterima</string>
+    <string name="move_with_object">Pindah Activity dengan Object</string>
+    <string name="object_received">Object Diterima</string>
 </resources>
