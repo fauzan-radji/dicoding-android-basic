@@ -1,6 +1,7 @@
 package com.fauzan.myintentapp
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnMoveWithObjectActivity: Button = findViewById(R.id.btn_move_activity_object)
         btnMoveWithObjectActivity.setOnClickListener(this)
+
+        val btnDialPhone: Button = findViewById(R.id.btn_dial_number)
+        btnDialPhone.setOnClickListener(this)
     }
 
     override fun onClick(button: View?) {
@@ -44,6 +48,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     city = "Gorontalo"
                 )
                 moveIntent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person)
+                startActivity(moveIntent)
+            }
+
+            R.id.btn_dial_number -> {
+                val phoneNumber = "081234567890"
+                val moveIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(moveIntent)
             }
         }

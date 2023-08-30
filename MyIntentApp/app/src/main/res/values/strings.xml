@@ -6,4 +6,5 @@
     <string name="data_received">Data Diterima</string>
     <string name="move_with_object">Pindah Activity dengan Object</string>
     <string name="object_received">Object Diterima</string>
+    <string name="dial_number">Dial a Number</string>
 </resources>
