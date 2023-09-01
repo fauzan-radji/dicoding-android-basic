@@ -45,13 +45,13 @@ class MainActivity : AppCompatActivity() {
     private fun getListHeroes(): ArrayList<Hero> {
         val dataName = resources.getStringArray(R.array.data_name)
         val dataDescription = resources.getStringArray(R.array.data_description)
-        val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+        val dataPhoto = resources.getStringArray(R.array.data_photo)
         val listHero = ArrayList<Hero>()
 
         for(i in dataName.indices) {
             val name = dataName[i]
             val description = dataDescription[i]
-            val photo = dataPhoto.getResourceId(i, -1)
+            val photo = dataPhoto[i]
             val hero = Hero(name = name, description = description, photo = photo)
             listHero.add(hero)
         }
